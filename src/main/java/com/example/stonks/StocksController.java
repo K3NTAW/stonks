@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class StocksController {
     @GetMapping("/")
     public String stockForm(Model model) {
-        model.addAttribute("stocksModel", new StocksModel());
+        model.addAttribute("userModel", new UserModel());
         return "login";
     }
 
     @PostMapping("/dashboard")
-    public String subbmit(Model model, @ModelAttribute StocksModel profile) {
+    public String subbmit(Model model, @ModelAttribute UserModel profile) {
         profile.connection();
         if(profile.valid())
         {
@@ -25,8 +25,8 @@ public class StocksController {
         }
     }
     @GetMapping("/dashboard")
-    public String dashboardForm(Model model, @ModelAttribute StocksModel profile) {
-        model.addAttribute("stocksModel", profile);
+    public String dashboardForm(Model model, @ModelAttribute UserModel profile) {
+        model.addAttribute("userModel", profile);
         return "dashboard";
     }
 }

@@ -8,7 +8,7 @@
     <title>Dashboard</title>
 </head>
 <body>
-<form  th:action="@{/dashboard}" method="get" th:object="${stocksModel}">
+<form  th:action="@{/dashboard}" method="get" th:object="${userModel}">
     <label>
         <input type="checkbox">
         <span class="menu"> <span class="hamburger"></span> </span>
@@ -27,7 +27,7 @@
             <h2 class="logo">King-Stocks</h2>
         </div>
     </div>
-    <p>Kunde: <strong><span  th:text="${stocksModel.email}"></span></strong></p>
+    <p>Kunde: <strong><span  th:text="${userModel.email}"></span></strong></p>
     <main>
         <div>
             <h3 class="tvStock">Stocks</h3>

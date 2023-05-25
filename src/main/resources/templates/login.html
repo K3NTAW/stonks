@@ -11,13 +11,13 @@
     <title>Login</title>
 </head>
 <body>
-<form th:action="@{/dashboard}" method="post" th:object="${stocksModel}">
+<form th:action="@{/dashboard}" method="post" th:object="${userModel}">
     <div class="container">
         <h2>Login</h2>
         <h4>Username</h4>
-        <input type="text" th:field="${stocksModel.email}">
+        <input type="text" th:field="${userModel.email}">
         <h4>Password</h4>
-        <input type="password" placeholder="Password" th:field="${stocksModel.password}">
+        <input type="password" placeholder="Password" th:field="${userModel.password}">
     </div>
     <div class="container">
         <button type="submit" value="Submit" class="btn btn-default">submit</button>
