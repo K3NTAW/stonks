@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mariadb-connector-c-3.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/mariadb-connector-c-3.3.5-debian-buster-amd64" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
