@@ -24,9 +24,24 @@ public class StocksController {
             return "login";
         }
     }
+    @PostMapping("/Dashboard")
+    public String createaccount(Model model, @ModelAttribute UserModel profile) {
+        profile.connection();
+        profile.create();
+        return "dashboard";
+    }
     @GetMapping("/dashboard")
     public String dashboardForm(Model model, @ModelAttribute UserModel profile) {
         model.addAttribute("userModel", profile);
         return "dashboard";
+    }
+    @PostMapping("/register")
+    public String create(Model model, @ModelAttribute UserModel profile) {
+        return "register";
+    }
+    @GetMapping("/register")
+    public String createForm(Model model) {
+        model.addAttribute("userModel", new UserModel());
+        return "register";
     }
 }

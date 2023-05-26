@@ -51,4 +51,19 @@ public class UserModel {
             throw new RuntimeException(e);
         }
     }
+    public void create(){
+        try {
+            PreparedStatement preparedStatement = conn
+                    .prepareStatement("INSERT INTO user (username, password) VALUES (?,? )");
+            {
+                preparedStatement.setString(1, getEmail());
+                preparedStatement.setString(2, getPassword());
+                System.out.println(preparedStatement);
+                ResultSet rs = preparedStatement.executeQuery();
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
