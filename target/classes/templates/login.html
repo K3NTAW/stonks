@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/login.css">
     <title>Login</title>
 </head>
@@ -17,10 +14,10 @@
         <h4>Username</h4>
         <input type="text" th:field="${userModel.email}">
         <h4>Password</h4>
-        <input type="password" placeholder="Password" th:field="${userModel.password}">
+        <input type="password" th:field="${userModel.password}">
     </div>
-    <div class="container">
-        <button type="submit" value="Submit" class="btn btn-default">submit</button>
+    <div class="container-btn">
+        <button type="submit" class="button" value="Submit" style="--clr:#0FF0FC"><span>submit</span><i></i></button>
     </div>
 </form>
 </body>
