@@ -8,8 +8,9 @@ import java.sql.*;
 @Setter
 public class UserModel {
     private int id;
-    private String email = "";
+    private String username = "";
     private String password = "";
+    private int balance;
     private final String JDBC_DRIVER = "org.mariadb.jdbc.Driver";
     private String connect = "root";
     private String dbPassword = "1234";
@@ -34,7 +35,7 @@ public class UserModel {
             PreparedStatement preparedStatement = conn
                     .prepareStatement("select * from user where username = ? and password = ? ");
             {
-                preparedStatement.setString(1, getEmail());
+                preparedStatement.setString(1, getUsername());
                 preparedStatement.setString(2, getPassword());
                 System.out.println(preparedStatement);
                 ResultSet rs = preparedStatement.executeQuery();
@@ -56,7 +57,7 @@ public class UserModel {
             PreparedStatement preparedStatement = conn
                     .prepareStatement("INSERT INTO user (username, password) VALUES (?,? )");
             {
-                preparedStatement.setString(1, getEmail());
+                preparedStatement.setString(1, getUsername());
                 preparedStatement.setString(2, getPassword());
                 System.out.println(preparedStatement);
                 ResultSet rs = preparedStatement.executeQuery();

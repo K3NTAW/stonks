@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,32 @@
     <title>Portfolio</title>
 </head>
 <body>
-
+<header>
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    Portfolio
+                </div>
+                <div class="menu-items">
+                    <form  th:action="@{/dashboard}" method="get" th:object="${userModel}">
+                    <li><button  type="submit" value="Submit">Dashboard</button></li>
+                    </form>
+                    <li><button ><p class="active">Portfolio</p></button></li>
+                    <li><button type="submit" value="Submit">selling</button></li>
+                    <li><button type="submit" value="Submit">buying</button></li>
+                    <li><button type="submit" value="Submit">transactions</button></li>
+                    <footer><p>Ipressum Joel is the king and the owner of the galaxy</p></footer>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 </body>
 </html>

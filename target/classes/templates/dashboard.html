@@ -8,7 +8,7 @@
     <title>Dashboard</title>
 </head>
 <body>
-<form  th:action="@{/dashboard}" method="get" th:object="${userModel}">
+
     <header>
     <nav>
         <div class="navbar">
@@ -22,12 +22,16 @@
                 <div class="logo">
                     Dashboard
                 </div>
+
                 <div class="menu-items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">selling</a></li>
-                    <li><a href="#">buying</a></li>
-                    <li><a href="#">transactions</a></li>
+                    <li><button><p class="active">Dashboard</p></button></li>
+
+                    <form  th:action="@{/portfolio}" method="get" th:object="${userModel}">
+                        <li><button type="submit" value="Submit">Portfolio</button></li>
+                    </form>
+                    <li><button type="submit" value="Submit">selling</button></li>
+                    <li><button type="submit" value="Submit">buying</button></li>
+                    <li><button type="submit" value="Submit">transactions</button></li>
                     <footer><p>Ipressum Joel is the king and the owner of the galaxy</p></footer>
                 </div>
             </div>
@@ -35,9 +39,11 @@
     </nav>
     </header>
     <main>
+        <form  th:action="@{/dashboard}" method="get" th:object="${userModel}">
             <div class="startText">
-                <h2 class="logoText">Willkommen <span th:text="*{email}"></span></h2>
+                <h2 class="logoText">Willkommen <span th:text="*{username}"></span></h2>
             </div>
+        </form>
         <section id="charts">
             <p class="list-text">{Stock Name}</p>
             <div class="diagram-charts">
@@ -65,7 +71,6 @@
             <!-- Weitere Aktienkarten können hier hinzugefügt werden -->
         </section>
     </main>
-</form>
 
 </body>
 </html>

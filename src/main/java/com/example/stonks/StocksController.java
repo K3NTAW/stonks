@@ -44,4 +44,14 @@ public class StocksController {
         model.addAttribute("userModel", new UserModel());
         return "register";
     }
+    @PostMapping("/portfolio")
+    public String portfolio(Model model, @ModelAttribute UserModel profile) {
+        return "portfolio";
+    }
+    @GetMapping("/portfolio")
+    public String portfolioForm(Model model, @ModelAttribute UserModel profile) {
+        model.addAttribute("userModel", profile);
+        return "portfolio";
+    }
+
 }

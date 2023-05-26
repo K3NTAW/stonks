@@ -28,7 +28,7 @@ header{
     background-color: #333333;
 }
 .navbar {
-    width: 80%;
+    width: 50%;
 }
 
 .nav-container {
@@ -133,6 +133,19 @@ footer {
     transition: transform 0.5s ease-in-out;
     text-align: center;
     background-color: #333333;
+}
+
+.navbar .menu-items button{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    color: #98ABEE;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.navbar .menu-items button:hover{
+    font-weight: bolder;
+    color: #91D1F5;
 }
 
 .navbar .menu-items li {
@@ -261,6 +274,9 @@ h1 {
         margin-bottom:10px;
         color: #98ABEE;
     }
+    .navbar {
+        width: 80%;
+    }
 }
 .stock-info h2 {
     font-size: 18px;
@@ -290,4 +306,8 @@ h1 {
 
 
 
+.active {
+    font-weight: bolder;
+    color: #91D1F5;
+}
 

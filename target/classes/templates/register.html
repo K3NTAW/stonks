@@ -12,7 +12,7 @@
     <div class="container">
         <h2>Create Account</h2>
         <h4>Username</h4>
-        <input type="text" th:field="${userModel.email}" required>
+        <input type="text" th:field="${userModel.getUsername}" required>
         <h4>Password</h4>
         <input type="password" th:field="${userModel.password}" required>
     </div>

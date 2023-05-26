@@ -8,5 +8,9 @@ import java.sql.*;
 @Getter
 @Setter
 public class StocksModel {
+    private String name;
+    private int price;
+
+
 
 }
