@@ -11,18 +11,18 @@ public class UserModel {
     private String username = "";
     private String password = "";
     private int balance;
-    private final String JDBC_DRIVER = "org.mariadb.jdbc.Driver";
+    private final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     private String connect = "root";
     private String dbPassword = "1234";
-    private String url = "jdbc:mariadb://localhost:3306/stonks_db";
+    private String url = "jdbc:mysql://localhost:3306/stonks_db";
     private Connection conn = null;
 
     public void connection() {
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Connecting to a selected database...");
             conn = DriverManager.getConnection(
-                    "jdbc:mariadb://localhost/stonks_db", "root", "1234");
+                    "jdbc:mysql://localhost:3306/stonks_db", "root", "1234");
             System.out.println("Connected database successfully...");
         }
         catch (ClassNotFoundException | SQLException e) {
