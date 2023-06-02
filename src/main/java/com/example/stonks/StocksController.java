@@ -25,7 +25,6 @@ public class StocksController {
         model.addAttribute("userModel", new UserModel());
         return "login";
     }
-
     @PostMapping("/dashboard")
     public String subbmit(Model model, @ModelAttribute UserModel profile) {
         profile.connection();
@@ -63,6 +62,12 @@ public class StocksController {
     public String createForm(Model model) {
         model.addAttribute("userModel", new UserModel());
         return "register";
+    }
+
+    @GetMapping("/gugus")
+    public String redirectError() {
+        log.info("errorPage");
+        return "errorLandingPage";
     }
     @PostMapping("/portfolio")
     public String portfolio(Model model, @ModelAttribute UserModel profile) {
